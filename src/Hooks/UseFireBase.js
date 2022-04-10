@@ -15,20 +15,15 @@ const UseFireBase = () => {
                 setUser(user)
             })
     }
-
     const handleSignOut = () => {
         signOut(auth)
             .then(() => { })
     }
-
     useEffect(() => {
         onAuthStateChanged(auth, user => {
             setUser(user)
         })
-
     }, [])
-
-
 
     return {
         user,
